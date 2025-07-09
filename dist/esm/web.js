@@ -1,4 +1,4 @@
-import { registerPlugin, WebPlugin } from '@capacitor/core';
+import { WebPlugin } from '@capacitor/core';
 export class CheckoutWeb extends WebPlugin {
     constructor() {
         super();
@@ -85,9 +85,5 @@ export class CheckoutWeb extends WebPlugin {
         // }
     }
 }
-const Checkout = registerPlugin('Checkout', {
-    web: () => import('./web').then(m => new m.CheckoutWeb())
-});
 export * from './definitions';
-export { Checkout };
 //# sourceMappingURL=web.js.map

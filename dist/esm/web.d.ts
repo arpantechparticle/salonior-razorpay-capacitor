@@ -14,6 +14,4 @@ export declare class CheckoutWeb extends WebPlugin implements CheckoutPlugin {
         response: string;
     }>;
 }
-declare const Checkout: CheckoutPlugin;
 export * from './definitions';
-export { Checkout };

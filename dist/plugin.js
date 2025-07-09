@@ -87,14 +87,9 @@ var capacitorPlugin = (function (exports, core) {
             // }
         }
     }
-    const Checkout = core.registerPlugin('Checkout', {
-        web: () => Promise.resolve().then(function () { return web; }).then(m => new m.CheckoutWeb())
-    });
 
-    var web = /*#__PURE__*/Object.freeze({
-        __proto__: null,
-        CheckoutWeb: CheckoutWeb,
-        Checkout: Checkout
+    const Checkout = core.registerPlugin('Checkout', {
+        web: () => Promise.resolve(new CheckoutWeb()),
     });
 
     exports.Checkout = Checkout;
